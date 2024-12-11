@@ -1,24 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import Table from './components/Table.vue';
-import books from './bookdata';
-import Card from './components/Card.vue';
+import Header from "./components/Header.vue";
+import BookView from "./components/BookView.vue";
+import books from "./assets/book_data.json";
+import { ref } from "vue";
+import { ViewType } from "./types";
 
-// Reaktív változó létrehozása
-const isTableView = ref(false);
+const view_type = ref(ViewType.Card);
 </script>
 
 <template>
-  <button @click="isTableView = !isTableView" class="btn">
-    {{ isTableView ? 'Switch to Card View' : 'Switch to Table View' }}
-  </button>
-  <Table v-if="isTableView" :books="books" />
-  <Card v-else :books="books" />
+    <Header @toggle-view="() => (view_type = Math.abs(view_type - 1))"></Header>
+    <BookView :books="books" :view_type="view_type"></BookView>
 </template>
 
-<style scoped>
-  .btn{
-    background-color: rgb(114, 114, 250);
-    color: white;
-  }
-</style>
+<style scoped></style>
