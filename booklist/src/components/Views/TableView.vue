@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IBook } from "@/types";
+import { IBook } from "../../types";
 
 defineProps<{
     content: IBook[];
@@ -32,14 +32,38 @@ defineProps<{
 <style scoped>
 table {
     border-collapse: collapse;
+    background-color: var(--bg);
+    border: 2px solid var(--light-green);
+    display: block;
+    border-radius: 10px;
 }
-
-td,
-th {
+th,
+td {
     padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: var(--dark);
+    color: #fff;
 }
 
-th {
-    background-color: var(--cyan);
+tbody tr:nth-child(odd) {
+    background-color: var(--bg);
+}
+tbody tr:nth-child(even) {
+    background-color: var(--dark);
+}
+
+th:first-of-type {
+    border-top-left-radius: 10px;
+}
+th:last-of-type {
+    border-top-right-radius: 10px;
+}
+tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 10px;
+}
+tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 10px;
 }
 </style>

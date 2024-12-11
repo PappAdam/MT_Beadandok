@@ -4,7 +4,7 @@ export enum ViewType {
 }
 
 export interface IBook {
-    author: string; 
+    author: string;
     title: string;
     description: string;
     img_url: string;

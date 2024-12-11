@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IBook, ViewType } from "@/types";
+import { IBook, ViewType } from "../types";
 import CardView from "./Views/CardView.vue";
 import TableView from "./Views/TableView.vue";
 
