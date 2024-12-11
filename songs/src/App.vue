@@ -119,7 +119,7 @@ th,
 td {
     padding: 10px;
     text-align: left;
-    width: 100%;
+    width: 50%;
 }
 th {
     background-color: var(--dark);
@@ -138,11 +138,5 @@ th:first-of-type {
 }
 th:last-of-type {
     border-top-right-radius: 10px;
-}
-tr:last-of-type td:first-of-type {
-    border-bottom-left-radius: 10px;
-}
-tr:last-of-type td:last-of-type {
-    border-bottom-right-radius: 10px;
 }
 </style>

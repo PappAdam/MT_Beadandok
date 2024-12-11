@@ -36,15 +36,18 @@ table {
     border: 2px solid var(--light-green);
     display: block;
     border-radius: 10px;
+    width: 60%;
+    margin: 0 auto;
 }
 th,
 td {
     padding: 10px;
     text-align: left;
+    width: 50%;
 }
 th {
     background-color: var(--dark);
-    color: #fff;
+    color: var(--light-green);
 }
 
 tbody tr:nth-child(odd) {

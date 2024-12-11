@@ -28,6 +28,7 @@ defineProps<{
     gap: 20px;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 .card {
