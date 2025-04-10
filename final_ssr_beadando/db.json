@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "id": "76a6",
+      "title": "Finish this app",
+      "description": "Meet all requirements.",
+      "completed": true
+    },
+    {
+      "id": "cd3a",
+      "title": "Have a beer",
+      "description": "You've earned it.",
+      "completed": false
+    }
+  ]
+}
